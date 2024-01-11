@@ -105,21 +105,21 @@
 
                 <div data-role="header">
                     <a href="#page-contact-details" data-icon="delete" data-role="button" data-iconpos="notext" alt= "cancel">Annuler</a>
-                    <h1>Enregistrement</h1>
+                    <h1>Modifier contact</h1>
                 </div>
 
-                <ul id="" data-role="listview" data-inset="true">
+                <ul id="editContact" data-role="listview" data-inset="true">
                     <form name="contactFormEdit">
-                        <input type="text" id="FirstName" name="FirstName" placeholder="Prénom" autofocus required>
-                        <input type="text" id="LastName" name="LastName" placeholder="Nom" required>
-                        <input type="text" id="NickName" name="NickName" placeholder="Surnom">
-                        <input type="tel" id="Number01" name="Number01" placeholder="Téléphone 1" required>
-                        <input type="tel" id="Number02" name="Number02" placeholder="Téléphone 2">
-                        <input type="text" id="Organization" name="Organization" placeholder="Organisation">
-                        <input type="email" id="E-mail1" name="E-mail1" placeholder="E-mail 1">
-                        <input type="email" id="E-mail2" name="E-mail2" placeholder="E-mail 2">
-                        <input type="text" id="Addresse" name="Addresse" placeholder="Adresse">
-                        <button type="" id="registerButton" onclick="createContact()">Enregistrer</button>
+                        <input type="text" id="editFirstName" name="editFirstName" placeholder="Prénom" autofocus required>
+                        <input type="text" id="editLastName" name="editLastName" placeholder="Nom" required>
+                        <input type="text" id="editNickName" name="editNickName" placeholder="Surnom">
+                        <input type="tel" id="editNumber01" name="editNumber01" placeholder="Téléphone 1" required>
+                        <input type="tel" id="editNumber02" name="editNumber02" placeholder="Téléphone 2">
+                        <input type="text" id="editOrganization" name="editOrganization" placeholder="Organisation">
+                        <input type="email" id="editE-mail1" name="editE-mail1" placeholder="E-mail 1">
+                        <input type="email" id="editE-mail2" name="editE-mail2" placeholder="E-mail 2">
+                        <input type="text" id="editAddresse" name="editAddresse" placeholder="Adresse">
+                        <button type="" id="editregister" onclick="toEditContact()">Modifier</button>
                     </form>
                 </ul>
             </div>
