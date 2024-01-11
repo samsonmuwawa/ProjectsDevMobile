@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact-App</title>
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css"> 
+        <link rel="stylesheet" href="css/index.css">
+
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+
+        <link rel="stylesheet" href="lib/themes/ContactApp.min.css" />
+        <link rel="stylesheet" href="lib/themes/jquery.mobile.icons.min.css" />
+
+        <link rel="stylesheet" href="lib/themes/jquery.mobile.structure-1.4.5.min.css" />
+    </head>
+    <body>
+        <!-- AFFICHER CONTACT LISTS-->
+
+        <div id="page-contact-list" data-role="page">
+            <div data-role="header">
+                <h1>Contact-App</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="header">
+                    <a href="#" data-icon="home" data-role="button" data-iconpos="notext" data-iconpos="left" alt= "home">Accueil</a>
+                    <h1>Mes Contacts</h1>
+                    <a href="#page-AddContact" id="createContact" data-icon="plus" data-role="button" data-iconpos="notext" alt= "Add">Ajouter</a>
+                </div>
+                <ul id="contactList" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Rechercher un contact">
+
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Samson Mww &copy;  2023</h1>
+            </div>
+        </div>
+
+        <!-- AFFICHER DETAILS CONTACT -->
+
+        <div id="page-contact-details" data-role="page">
+            <div data-role="header">
+                <a href="#page-contact-list" data-icon="back" data-role="button" data-iconpos="notext" data-iconpos="left" alt= "Return">Retour</a>
+                <h1>Contact-App</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="header">
+                    <a href="#pageEditContact" data-icon="edit" data-role="button" data-iconpos="notext" alt= "Edit">Modifier</a>
+                    <h1>Détails Contact</h1>
+                    <a href="#" id="deleteContact" data-icon="delete" data-role="button" data-iconpos="notext" alt= "delete">Supprimer</a>
+                </div>
+                <ul id="contactDetail" data-role="listview" data-inset="true">
+                    
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Samson Mww &copy;  2023</h1>
+            </div>
+        </div>
+
+        <!-- AJOUTER CONTACT -->
+
+        <div id="page-AddContact" data-role="page">
+            <div data-role="header">
+                <a href="#page-contact-list" id="home" data-icon="back" data-role="button" data-iconpos="notext" data-iconpos="left" alt= "Accueil">Accueil</a>
+                <h1>Contact-App</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <div data-role="header">
+                    <a href="#page-contact-list" data-icon="delete" data-role="button" data-iconpos="notext" alt= "cancel">Annuler</a>
+                    <h3>Enregistrement</h3>
+                    <a href="#" id="register" data-icon="check" data-role="button" data-iconpos="notext" alt= "register">Enregistrer</a>
+                </div>
+                <ul id="" data-role="listview" data-inset="true">
+                    <form name="contactForm">
+                        <input type="text" id="FirstName" name="FirstName" placeholder="Prénom" autofocus required>
+                        <input type="text" id="LastName" name="LastName" placeholder="Nom" required>
+                        <input type="text" id="NickName" name="NickName" placeholder="Surnom">
+                        <input type="tel" id="Number01" name="Number01" placeholder="Téléphone 1" required>
+                        <input type="tel" id="Number02" name="Number02" placeholder="Téléphone 2">
+                        <input type="text" id="Organization" name="Organization" placeholder="Organisation">
+                        <input type="email" id="E-mail1" name="E-mail1" placeholder="E-mail 1">
+                        <input type="email" id="E-mail2" name="E-mail2" placeholder="E-mail 2">
+                        <input type="text" id="Addresse" name="Addresse" placeholder="Adresse">
+                        <button type="" id="registerButton" onclick="createContact()">Enregistrer</button>
+                    </form>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Samson Mww &copy;  2023</h1>
+            </div>
+        </div>
+
+        <!-- EDITER LE CONTACT -->
+
+        <div id="pageEditContact" data-role="page">
+            <div data-role="header">
+                <h1>Contact-App</h1>
+            </div>
+            <div role="main" class="ui-content">
+
+                <div data-role="header">
+                    <a href="#page-contact-details" data-icon="delete" data-role="button" data-iconpos="notext" alt= "cancel">Annuler</a>
+                    <h1>Enregistrement</h1>
+                </div>
+
+                <ul id="" data-role="listview" data-inset="true">
+                    <form name="contactFormEdit">
+                        <input type="text" id="FirstName" name="FirstName" placeholder="Prénom" autofocus required>
+                        <input type="text" id="LastName" name="LastName" placeholder="Nom" required>
+                        <input type="text" id="NickName" name="NickName" placeholder="Surnom">
+                        <input type="tel" id="Number01" name="Number01" placeholder="Téléphone 1" required>
+                        <input type="tel" id="Number02" name="Number02" placeholder="Téléphone 2">
+                        <input type="text" id="Organization" name="Organization" placeholder="Organisation">
+                        <input type="email" id="E-mail1" name="E-mail1" placeholder="E-mail 1">
+                        <input type="email" id="E-mail2" name="E-mail2" placeholder="E-mail 2">
+                        <input type="text" id="Addresse" name="Addresse" placeholder="Adresse">
+                        <button type="" id="registerButton" onclick="createContact()">Enregistrer</button>
+                    </form>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Samson Mww &copy;  2023</h1>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,18 @@
+label, #tache{
+    text-align: center;
+}
+.done{
+    text-decoration: line-through;
+}
+ /* Ajoutez vos styles personnalisés ici */
+ #tache::placeholder {
+    color: gray; /* Couleur du texte dans le placeholder */
+}
+
+label {
+    display: block;
+    font-size: 1.2em; /* Taille de police pour les labels */
+    margin-top: 10px; /* Marge supérieure pour les labels */
+    color: white; /* Couleur du texte pour les labels */
+}
+

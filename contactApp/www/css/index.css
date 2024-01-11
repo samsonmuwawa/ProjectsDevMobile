@@ -1,0 +1,25 @@
+.column {
+    float: left;
+  }
+
+  .left, .right{
+    width: 15%;
+    margin-left: 2%
+  }
+  
+  .middle {
+      width: 65%;
+    }
+
+    .left1, .right1{
+      float:center;
+      width: 100%;
+    }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
